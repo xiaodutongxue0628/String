@@ -1,6 +1,7 @@
 package com.hp.collectiondemo03;
 
-public class Person {
+//泛型必须要加，因为要做对比
+public class Person implements Comparable<Person>{
     private String name;
     private int height;
     private int age;
@@ -36,5 +37,14 @@ public class Person {
                 ", height=" + height +
                 ", age=" + age +
                 '}';
+    }
+
+    //实现的接口是，比较接口
+    @Override
+    public int compareTo(Person o) {
+        //目前，按身高排序
+        //如果return的返回值大于0  就是自身大于被比较对象
+        int x = this.getAge()-o.getAge();
+        return x;
     }
 }

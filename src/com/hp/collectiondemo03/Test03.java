@@ -1,4 +1,7 @@
 package com.hp.collectiondemo03;
+
+import java.util.ArrayList;
+
 /**
  * 创建一个List集合(ArrayList,LinkedList均可)
  * 存放元素"one","two","three","four"。
@@ -10,5 +13,19 @@ package com.hp.collectiondemo03;
  *
  */
 public class Test03 {
-
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();//创建集合
+        //添加数据
+        list.add("one");
+        list.add("two");
+        list.add("three");
+        list.add("four");
+        System.out.println(list.get(1)); //第二个元素，下标为1
+        list.set(2,"3");  //设置下标的值
+        System.out.println("list = " + list);
+        list.add(1,"2");
+        System.out.println("list = " + list);
+        list.remove(3);  //删除元素集合中下标为3的元素
+        System.out.println("list = " + list);
+    }
 }
