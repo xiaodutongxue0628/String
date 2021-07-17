@@ -9,11 +9,14 @@ import java.io.File;
  */
 public class Test04 {
     public static void main(String[] args) {
-        //获取当前目录下的文件以及文件夹的名称
-        File file=new File("/");
-        File[] files = file.listFiles();
-        for (File f:files) {
-            System.out.println("所有文件:"+f.getName());
-        }
+        //当前所存在的目录
+    File file = new File("/");
+
+    //listFiles():查看所有文件
+    File[] files = file.listFiles();
+
+        for (File file1 : files) {
+        System.out.println("所有文件和目录:"+file1.getName());
     }
+}
 }
